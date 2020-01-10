@@ -46,80 +46,84 @@ Some of the methods listed are provided to you in the starter code. You should c
 
 ### Initializers, Readers, and Writers
 
-#### Company
+#### DogWalker
 
-- `Company#initialize(name, founding_year)`
-  - should initialize with a name (string) and founding_year (integer)
-- `Company#name`
-  - should return the name of the company
-- `Company#founding_year`
-  - should return the founding_year
-- `Company.all`
+- `DogWalker#initialize(name, favorite_breed)`
+  - should initialize with a name (string) and favorite_breed (integer)
+- `DogWalker#name`
+  - should return the name of the dog walker. _Should not_ be able to change after initialization.
+- `DogWalker#favorite_breed`
+  - should return the favorite breed of the dog walker. _Should_ be able to change after initialization.
+- `DogWalker.all`
   - Returns an array of all Company instances
 
-#### Dev
+#### Dog
 
-- `Dev#initialize(name)`
-  - should initialize with a name (string)
-- `Dev#name`
-  - should return the name of the dev
-- `Dev.all`
-  - Returns an array of all Dev instances
+- `Dog#initialize(name, breed, good_boy)`
+  - should initialize with a name (string), a breed (string), and whether or not this dog is a good boy (boolean)
+- `Dog#name`
+  - should return the name of the dog. _Should not_ be able to change after initialization.
+- `Dog#breed`
+  - should return the breed of the dog. _Should not_ be able to change after initialization.
+- `Dog#good_boy`
+  - should return the dog's good boy status. _Should_ be able to change after initialization.
+- `Dog.all`
+  - Returns an array of all Dog instances
 
-#### Freebie
+#### Walk
 
-- `Freebie#initialize(item_name, company, dev)`
-  - should initialize with a name (string), company (`Company` instance) and dev (`Dev` instance)
-- `Freebie#item_name`
-  - should return the name of the item, ie. `"sticker"` or `"water bottle"`
-- `Freebie.all`
-  - Returns an array of all Freebie instances
+- `Walk#initialize(length_in_minutes, dog, dog_walker)`
+  - should initialize with a length_in_minutes (integer), dog (`Dog` instance) and dog_walker (`DogWalker` instance)
+- `Walk#length_in_minutes`
+  - should return the length of the walk in minutes. _Should not_ be able to change after initialization.
+- `Walk.all`
+  - Returns an array of all Walk instances
 
 ### Object Relationship Methods
 
-#### Company
+#### DogWalker
 
-- `Company#freebies`
-  - returns an array of all the freebies given out by the company
-- `Company#devs`
-  - returns a **unique** array of all the devs who received freebie(s) from the company
+- `DogWalker#walks`
+  - returns an array of all the walks given by the DogWalker
+- `DogWalker#dogs`
+  - returns a **unique** array of all the dogs who been walked by the DogWalker
 
-#### Dev
+#### Dog
 
-- `Dev#freebies`
-  - returns an array of all the freebies that the dev owns
-- `Dev#companies`
-  - returns a **unique** array of all the companies that the dev received freebie(s) from
+- `Dog#walks`
+  - returns an array of all the walks that the Dog has taken
+- `Dog#dog_walkers`
+  - returns a **unique** array of all the dog walkers that the Dog received walks from
 
-#### Freebie
+#### Walk
 
-- `Freebie#dev`
-  - should return the `Dev` instance for this freebie
-- `Freebie#company`
-  - should return the `Company` instance for this freebie
+- `Walk#dog`
+  - should return the `Dog` instance for this Walk.
+- `Walk#dog_walker`
+  - should return the `DogWalker` instance for this Walk.
 
 ### Aggregate and Association Methods
 
-#### Company
+#### DogWalker
 
-- `Company#give_freebie(dev, item_name)`
-  - takes a `dev` (an instance of the `Dev` class) and an `item_name` (string) as arguments, and creates a new `Freebie` instance associated with this company and the given dev
-- `Company.oldest_company`
-  - returns the `Company` instance with the earliest founding year
-- `Company.most_given_away`
-  - should return an instance of `Company` which has the most freebies given out to devs
+- `DogWalker#give_walk(length_in_minutes, dog)`
+  - takes a `dog` (an instance of the `Dog` class) and an `length_in_minutes` (integer) as arguments, and creates a new `Walk` instance associated with this dog walker and the given dog
+- `DogWalker#length_of_all_walks`
+  - returns an integer for the total length of all walks this dog walker has given
+- `DogWalker.most_walks`
+  - should return an instance of `DogWalker` which has given the most walks
 
-#### Dev
+#### Dog
 
-- `Dev.freebie_hoarder`
-  - returns *one* dev instance for the dev who owns the most amount of freebies
-- `Dev#no_longer_a_fan_of(company)`
-  - accepts a `Company` instance as an argument, finds all of the freebies associated with this dev and the company, and deletes them all
+- `Dog#take_walk(length_in_minutes, dog_walker)`
+  - takes a `dog_walker` (an instance of the `DogWalker` class) and an `length_in_minutes` (integer) as arguments, and creates a new `Walk` instance associated with this dog and the given dog walker
+- `Dog.good_boys`
+  - returns an array of all dog instances whose are good boys
 
-#### Freebie
+#### Walk
 
-- `Freebie#sentence`
-  - should return a string formatted as follows: `{insert dev's name} owns a {insert freebie's item_name} from {insert company's name}`
+- `Walk#happy_walker?`
+  - should return true if the favorite_breed of the dog walker for this walk matches the breed of the dog for this walk, and false if it doesn't match
 
 ## Rubric
 
