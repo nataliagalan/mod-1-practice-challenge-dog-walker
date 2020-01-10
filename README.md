@@ -49,13 +49,13 @@ Some of the methods listed are provided to you in the starter code. You should c
 #### DogWalker
 
 - `DogWalker#initialize(name, favorite_breed)`
-  - should initialize with a name (string) and favorite_breed (integer)
+  - should initialize with a name (string) and favorite_breed (string)
 - `DogWalker#name`
   - should return the name of the dog walker. _Should not_ be able to change after initialization.
 - `DogWalker#favorite_breed`
   - should return the favorite breed of the dog walker. _Should_ be able to change after initialization.
 - `DogWalker.all`
-  - Returns an array of all Company instances
+  - Returns an array of all DogWalker instances
 
 #### Dog
 
