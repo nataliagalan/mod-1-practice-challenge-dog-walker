@@ -1,5 +1,6 @@
 class DogWalker
-  attr_reader :name, :favorite_breed
+  attr_reader :name
+  attr_accessor :favorite_breed
 
   @@all = []
 
