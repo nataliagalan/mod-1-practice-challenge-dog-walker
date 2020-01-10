@@ -60,13 +60,13 @@ Some of the methods listed are provided to you in the starter code. You should c
 #### Dog
 
 - `Dog#initialize(name, breed, good_dog)`
-  - should initialize with a name (string), a breed (string), and whether or not this dog is a good boy (boolean)
+  - should initialize with a name (string), a breed (string), and whether or not this dog is a good dog (boolean)
 - `Dog#name`
   - should return the name of the dog. _Should not_ be able to change after initialization.
 - `Dog#breed`
   - should return the breed of the dog. _Should not_ be able to change after initialization.
 - `Dog#good_dog`
-  - should return the dog's good boy status. _Should_ be able to change after initialization.
+  - should return the dog's good dog status. _Should_ be able to change after initialization.
 - `Dog.all`
   - Returns an array of all Dog instances
 
@@ -129,7 +129,7 @@ Some of the methods listed are provided to you in the starter code. You should c
   - should `puts` to the terminal a string for each of the dog's walks
   - each string should be formatted like this: `{dog walker name} walked {dog name} for {length} minutes`
 - `Dog.good_dogs`
-  - returns an array of all dog instances whose are good boys
+  - returns an array of all dog instances whose are good dogs
 
 
 ## Rubric
