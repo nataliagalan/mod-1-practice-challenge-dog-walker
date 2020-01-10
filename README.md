@@ -59,13 +59,13 @@ Some of the methods listed are provided to you in the starter code. You should c
 
 #### Dog
 
-- `Dog#initialize(name, breed, good_boy)`
+- `Dog#initialize(name, breed, good_dog)`
   - should initialize with a name (string), a breed (string), and whether or not this dog is a good boy (boolean)
 - `Dog#name`
   - should return the name of the dog. _Should not_ be able to change after initialization.
 - `Dog#breed`
   - should return the breed of the dog. _Should not_ be able to change after initialization.
-- `Dog#good_boy`
+- `Dog#good_dog`
   - should return the dog's good boy status. _Should_ be able to change after initialization.
 - `Dog.all`
   - Returns an array of all Dog instances
@@ -81,6 +81,13 @@ Some of the methods listed are provided to you in the starter code. You should c
 
 ### Object Relationship Methods
 
+#### Walk
+
+- `Walk#dog`
+  - should return the `Dog` instance for this Walk.
+- `Walk#dog_walker`
+  - should return the `DogWalker` instance for this Walk.
+  
 #### DogWalker
 
 - `DogWalker#walks`
@@ -95,14 +102,15 @@ Some of the methods listed are provided to you in the starter code. You should c
 - `Dog#dog_walkers`
   - returns a **unique** array of all the dog walkers that the Dog received walks from
 
+### Aggregate and Association Methods
+
 #### Walk
 
-- `Walk#dog`
-  - should return the `Dog` instance for this Walk.
-- `Walk#dog_walker`
-  - should return the `DogWalker` instance for this Walk.
-
-### Aggregate and Association Methods
+- `Walk#happy_walker?`
+  - should return true if the favorite_breed of the dog walker for this walk matches the breed of the dog for this walk, and false if it doesn't match
+- `Walk#print_details`
+  - should `puts` to the terminal a string representing this walk
+  - the string should be formatted like this: `{dog walker name} walked {dog name} for {length} minutes`
 
 #### DogWalker
 
@@ -117,13 +125,12 @@ Some of the methods listed are provided to you in the starter code. You should c
 
 - `Dog#take_walk(length_in_minutes, dog_walker)`
   - takes a `dog_walker` (an instance of the `DogWalker` class) and an `length_in_minutes` (integer) as arguments, and creates a new `Walk` instance associated with this dog and the given dog walker
-- `Dog.good_boys`
+- `Dog#print_walk_details`
+  - should `puts` to the terminal a string for each of the dog's walks
+  - each string should be formatted like this: `{dog walker name} walked {dog name} for {length} minutes`
+- `Dog.good_dogs`
   - returns an array of all dog instances whose are good boys
 
-#### Walk
-
-- `Walk#happy_walker?`
-  - should return true if the favorite_breed of the dog walker for this walk matches the breed of the dog for this walk, and false if it doesn't match
 
 ## Rubric
 
