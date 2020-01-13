@@ -6,7 +6,7 @@ We'll be making an app for dog walkers to track all the dogs they walk.
 
 We have three models: `Dog`, `Walk`, and `DogWalker`
 
-For our purposes, a `DogWalker` has many `Walks`s, a `Dog` has many `Walk`s, and a `Walk` belongs to a `Dog` and to a `DogWalker`.
+For our purposes, a `DogWalker` has many `Walk`s, a `Dog` has many `Walk`s, and a `Walk` belongs to a `Dog` and to a `DogWalker`.
 
 `Dog` - `DogWalker` is a many to many relationship.
 
